@@ -1,0 +1,25 @@
+
+.main{
+    position: relative;
+   
+}
+#octopus{
+    position:relative;
+     top: 100px;
+    left: 500px;
+
+
+}
+
+
+#hat{
+position:absolute;
+ top: 50px;
+  left: 470px;
+}
+
+#glasses{
+position:absolute;
+ top: 200px;
+  left: 540px;
+  }
