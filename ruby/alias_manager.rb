@@ -1,11 +1,8 @@
 puts "hello"
-
 answer = 'exit'
 letter_adv = ''
 while letter_adv !=  answer
    puts "change the name. Type exit to finish"
-   
-   
    letter_adv = gets.chomp
     index = letter_adv
     def letter_adv(str)
@@ -23,3 +20,15 @@ while letter_adv !=  answer
     
   p letter_adv(index)
 end
+
+
+agents = {
+  letter_adv => [
+    letter_adv(index)
+  ]       }
+   agents.each do |a, b|
+    puts "#{a} was #{b}  "
+end
+
+
+
