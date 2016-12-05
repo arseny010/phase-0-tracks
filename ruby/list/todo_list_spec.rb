@@ -19,3 +19,19 @@ describe TodoList do
     expect(list.get_item(0)).to eq "do the dishes"
   end
 end
+
+
+class TodoList
+	attr_reader :item
+	attr_accessor :age, :card
+
+	def initialize
+		@list = []
+	end 
+	def add_item(item)
+    	@list << @item
+    end
+    def remove(item)
+    	@list[item].delete
+    end
+end
