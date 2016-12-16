@@ -1,0 +1,6 @@
+SELECT * FROM "brands";
+UPDATE "brands" SET brand="Ford" WHERE brand="BMW";
+SELECT * FROM "brands", classes;
+SELECT  brands.brand, classes.class FROM brands JOIN classes ON brands.class = classes.id;
+DELETE FROM "brands" WHERE brand="Mazda";
+SELECT brand  FROM "brands" INNER JOIN "classes" ON brands.id = classes.class;
