@@ -1,0 +1,33 @@
+CREATE TABLE "businesses" (id PRIMARY KEY, name VARCHAR(255));
+CREATE TABLE "users" (id PRIMARY KEY, first_name VARCHAR(255), last_name VARCHAR(255));
+CREATE TABLE "reviews" (id PRIMARY KEY, stars INT, comment VARCHAR(255),
+ businesses_id INTEGER, 
+users_id INTEGER,
+FOREIGN KEY (businesses_id) REFERENCES businesses(id),
+ FOREIGN KEY (users_id) REFERENCES users(id)); 
+
+INSERT INTO "reviews" VALUES (5, "Love this place!", 1);
+INSERT INTO "reviews" VALUES (4, "Good food", 2);
+INSERT INTO "reviews" VALUES (3, "That's ok", 3);
+INSERT INTO "users" VALUES (1, "Stan", "Marsch");
+INSERT INTO "businesses" VALUES (1, "Mcd");
+INSERT INTO "businesses" VALUES (2, "KFC");
+INSERT INTO "businesses" VALUES (3, "Brgr King");
+
+SELECT
+  reviews.id AS reviews_id,
+  reviews.comment AS reviews_name, 
+  reviews.stars, 
+  reviews.users_id AS user_id, 
+  users.first_name AS first_name,
+  users.last_name AS last_name,  
+  reviews.businesses_id AS business_id, 
+  businesses.name AS business_name
+FROM 
+ Songs 
+ LEFT JOIN users ON reviews.user_id = users.id
+ LEFT JOIN businesses ON reviews.business_id = businesses.id
+
+CREATE VIEW "look_business" AS
+SELECT users.name, businesses.name, reviews.stars, reviews.comment;
+
