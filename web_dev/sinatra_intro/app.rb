@@ -12,7 +12,7 @@ get '/' do
   "#{params[:name]} is #{params[:age]} years old."
 end
 
-# write a GET route with
+# write a GET route wit
 # route parameters
 get '/about/:person' do
   person = params[:person]
