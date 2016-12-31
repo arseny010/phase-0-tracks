@@ -14,7 +14,7 @@ get '/' do
 end
 
 get '/students/new' do
-  erb :new_student
+  erb :new_student 
 end
 
 # create new students via
@@ -25,3 +25,4 @@ post '/students' do
 end
 
 # add static resources
+# 1q23
